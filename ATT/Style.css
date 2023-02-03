@@ -36,6 +36,27 @@ nav{
     backdrop-filter: blur(10px) ;
     z-index: 55;
 }
+
+nav::before{
+    position: absolute;
+    top:  0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(3, 3, 3);
+    box-shadow: 1px 1px 1px rgb(47, 128, 210);
+}
+nav::after{
+    position: absolute;
+    bottom:  0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: rgb(29, 177, 251);
+    box-shadow: 0px 1px 2px #08f;
+}
 button{
     cursor: pointer;
 }
@@ -80,6 +101,7 @@ nav ul a{
     font-size: 55px;
     color: white;
     text-shadow: 1px 2px 2px black;
+    margin: 20px 0px;
 }
 .titleparagrf{
     font-size: 35px;
@@ -289,13 +311,24 @@ nav ul a{
     100%{transform: scalex(1.05) translateY(0px);}
 }
 /* uyinchicards */
-.uyinchilarcards{
+.uyinchilarcards, .uyinchilarcards2{
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(4,auto);
     gap: 15px;
     padding: 50px 0px;
+}
+.ustozlarcard{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 15px;
+    padding: 50px 0px;
+}
+.uyinchicard h3{
+    font-size: 25px;
 }
 .uyinchicard{
     width: 100%;
@@ -365,9 +398,73 @@ nav ul a{
     border: 3px solid green;
     box-shadow: #08f 0px 4px 10px;
 }
+.modalyacunprofil{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.modalyacunprofil img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.modalyacunprofil .title{
+    font-size: 35px;
+    color:black;
+}
 .errimg{
     padding: 20px;
     border: 2px solid red;
     border-radius: 5px;
 }
 
+/* footer */
+footer{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px 5%;
+    justify-content: space-between;
+    background-color: #213;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 15px;
+}
+footer ul a{
+    color: grey;
+    font-size: 25px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.social svg{
+    width: 50px;
+    height: 50px;
+}
+
+.instagram{
+    color: rgb(232, 6, 229);
+}
+.telegram{
+    color: rgb(6, 89, 232);
+}
+.facebook{
+    color: rgb(20, 10, 212);
+}
+.github{
+    color: rgb(7, 7, 7);
+    background-color: white;
+    border-radius: 50%;
+    height: 90%;
+    overflow: hidden;
+}
+.github svg{
+    width: 100%;
+}
