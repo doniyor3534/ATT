@@ -11,6 +11,21 @@ body{
     list-style: none;
     font-family: 'Itim','cursive';
   }
+  .loadercontainer{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top right, rgb(26, 23, 23),black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 555;
+  }
+  .loadercontainer img{
+    border-radius: 50%;
+  }
   .App {
     text-align: center;
     width: 100%;
@@ -21,6 +36,18 @@ body{
     overflow: hidden;
     position: relative;
     padding-top: 60px;
+  }
+  .menu{
+     padding: 5px;
+     background-color: transparent;
+     border: none;
+     outline: none;
+     display: none;
+  }
+  .menu svg{
+     width: 40px;
+     height: 40px;
+     color: #213;
   }
 nav{
     max-width: 1440px;
@@ -64,6 +91,14 @@ button{
     font-size: 35px;
     color:black;
 }
+.logo:hover{
+    animation:  logo 0.3s ease-in 2;
+}
+@keyframes logo{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(3deg);}
+    100%{transform: rotate(-3deg);}
+}
 nav ul{
     width: 50%;
     display: flex;
@@ -72,6 +107,24 @@ nav ul{
 nav ul a{
     font-size: 25px;
     color: rgb(121, 5, 163);
+    position: relative;
+}
+nav ul a::before{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: orange;
+    transition: all 0.2s ease;
+}
+nav ul a:hover{
+    font-size: 25px;
+    color: rgb(95, 93, 96);
+}
+nav ul a:hover::before{
+    width: 100%;
 }
 .p{
     width: 50%;
@@ -102,12 +155,17 @@ nav ul a{
     color: white;
     text-shadow: 1px 2px 2px black;
     margin: 20px 0px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
 }
 .titleparagrf{
     font-size: 35px;
     color: white;
     text-shadow: 1px 2px 2px black;
     text-align: center;
+    margin: 20px 0px;
 }
 .blacktitle{
     font-size: 35px;
@@ -326,18 +384,23 @@ nav ul a{
     grid-template-columns: repeat(5,auto);
     gap: 15px;
     padding: 50px 0px;
+    display: flex;
+    overflow-x: scroll;
 }
+
 .uyinchicard h3{
     font-size: 25px;
 }
 .uyinchicard{
     width: 100%;
+    min-width: 200px;
     padding: 15px;
     border-radius: 7px;
     overflow: hidden;
     background-color: white;
     cursor: pointer;
 }
+
 .uyinchicard .imgcard {
     width: 100%;
     height: 70%;
@@ -417,6 +480,24 @@ nav ul a{
     border: 2px solid red;
     border-radius: 5px;
 }
+/* sec3 */
+/* .sec3{
+    width: 70%;
+    height: auto;
+    padding: 30px 0px;
+    margin:0 auto;
+    overflow: hidden;
+} */
+.splide{
+    height: 100%;
+    box-shadow:rgb(0, 0, 0) 10px 20px 20px;
+}
+ .splide__slide{
+    height: 600px !important;
+}
+
+
+
 
 /* footer */
 footer{
@@ -468,3 +549,112 @@ footer ul a{
 .github svg{
     width: 100%;
 }
+.splide__slide{
+    width: 500px;
+    height: 200px;
+}
+
+@media(max-width:420px){
+   .menu{
+    display: inline-block;
+   }
+   nav ul{
+    width: 100%;
+    height: 93vh;
+    background-color: rgba(255, 255, 255, 0.904);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 7vh;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0.5);
+   }
+   nav ul.active{
+    left: 0;
+    transform: scale(1);
+   }
+   nav ul a{
+      font-size: 40px;
+   }
+  /* sec1 */
+  .sec1{
+    padding: 0px 4%;
+    min-height: 300px;
+  }
+   .title{
+    font-size: 35px;
+   }
+   .uyinheader{
+      display: flex;
+      flex-direction: column;
+   }
+
+  /* sec2 */
+  .sec2{
+    padding: 50px 3%;
+  }
+  .uyinbody{
+    height: 350px;
+    padding: 10px;
+  }
+  .savol{
+    font-size: 18px;
+    height: min-content;
+    padding: 10px 0px;
+  }
+  .variant {
+    grid-template-columns: 100%;
+  }
+  .variant button{
+    font-size: 18px;
+  }
+  .next{
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .clear{
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .uyinmodalcard > img{
+     width: 100px;
+     height: 80px;
+  }
+  .blacktitle{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .modalyacunprofil .title{
+    font-size: 25px;
+  }
+  .modalyakunimg{
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .uyinchilarcards, .uyinchilarcards2{
+      overflow-x: scroll;
+    }
+    /* sec3 */
+    .splide__slide{
+        height: 250px !important;
+    }
+   /* footer */
+   footer{
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+   }
+
+
+
+
+}
+
+
+
+
+

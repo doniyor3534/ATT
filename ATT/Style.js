@@ -1,3 +1,33 @@
+let loadercontainer = document.querySelector('.loadercontainer')
+setTimeout(() => {
+    loadercontainer.style.display ='none'
+}, 2000);
+
+
+
+let ul = document.querySelector('nav ul')
+let ulA = document.querySelectorAll('nav ul a')
+let menu = document.querySelector('.menu')
+
+
+menu.addEventListener('click',()=>{
+    if(ul.className !== 'active'){
+        ul.classList.add('active')
+    }else{
+        ul.classList.remove('active')
+    }
+})
+
+ulA.forEach((val)=>{
+    val.addEventListener('click',()=>{
+        ul.classList.remove('active')
+    })
+})
+
+
+
+
+
 let savollar = [
     { id: 1, savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
     { id: 2, savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
@@ -5,7 +35,7 @@ let savollar = [
     { id: 4, savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
     { id: 5, savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
     { id: 6, savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
-    { id: 7, savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'lumot ', d: ' adres ' },
+    { id: 7, savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
 ]
 
 let javob = []
@@ -45,6 +75,9 @@ let ustozlardata = [
     { id: 3, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
     { id: 4, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
     { id: 5, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 6, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 7, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 8, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
 ]
 
 
@@ -181,7 +214,7 @@ function yakunalert() {
     let yakun = javob.filter((val, i) => javob[i] === tugrijavoblar[i])
     let foiz = 100 / tugrijavoblar.length
     uyinmodalcard.innerHTML = `
-    <h1 class='blacktitle'> <img src=${Math.floor(foiz * yakun.length) > 70 ? './img/yutuqimg.png' : './img/yutuqimg3.png'} alt='' />   ${Math.floor(foiz * yakun.length)} %  ya'ni ${yakun.length} ta to'g'ri   bajardingiz !!  <img src=${(foiz * yakun.length) > 70 ? './img/yutuqimg2.png' : './img/yutuqimg3.png'} alt='' /></h1>
+    <h1 class='blacktitle'> <img  src=${Math.floor(foiz * yakun.length) > 70 ? './img/yutuqimg.png' : './img/yutuqimg3.png'} alt='' class='modalyakunimg' />   ${Math.floor(foiz * yakun.length)} %  ya'ni ${yakun.length} ta to'g'ri   bajardingiz !!  <img src=${(foiz * yakun.length) > 70 ? './img/yutuqimg2.png' : './img/yutuqimg3.png'} alt=''  class='modalyakunimg' /></h1>
         <div class='modalyacunprofil'>
         <img src=${uyinchiprofil.img} alt="" class=''>
         <h2 class="title">${uyinchiprofil.name}</h2>
@@ -255,7 +288,7 @@ uyinchilarfun2()
 function ustozlarfunfun() {
     ustozlardata.map((val, i) => {
         ustozlarcard.innerHTML += `
-        <div class="uyinchicard">
+        <div class=" uyinchicard ">
         <div class="imgcard"><img src=${val.img} alt="" class="img"></div>
         <div class="satrs">
            ${Array(val.strs).fill('').map((img) => (
@@ -272,3 +305,32 @@ function ustozlarfunfun() {
 ustozlarfunfun()
 
 
+
+
+
+
+
+
+
+document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault()
+})
+document.onkeydown = function (e){
+   if(event.keyCode == 123){
+    return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey &&  e.keyCode == 'U'.charCodeAt(0)){
+     return false
+   }
+
+
+}
