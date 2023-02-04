@@ -139,9 +139,13 @@ let yakunresult = false
 let secfun = setInterval(secuntfun, 1000);
 clearInterval(secfun)
 function startfun() {
-    uyinfunc()
-    secfun = setInterval(secuntfun, 1000);
-    b = 0
+    if(!uyinchi){
+        uyincard.style.border ='2px solid red'
+    }else{
+        uyinfunc()
+        secfun = setInterval(secuntfun, 1000);
+        b = 0 
+    }
 }
 
 function secuntfun() {
