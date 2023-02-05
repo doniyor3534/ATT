@@ -182,14 +182,14 @@ nav ul a:hover::before{
 .sec2 {
     width: 100%;
     min-height: 100vh;
-    --border-size: 3px;
+    --border-size: 2px;
     --border-angle: 0turn;
     background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
     background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
     background-position: center center;
     background-repeat: no-repeat;
-    -webkit-animation: bg-spin 4s linear infinite;
-            animation: bg-spin 4s linear infinite;
+    -webkit-animation: bg-spin 6s linear infinite;
+            animation: bg-spin 6s linear infinite;
    padding: 60px 10%;
   
 
@@ -210,6 +210,48 @@ nav ul a:hover::before{
     inherits: true;
     initial-value: 0turn;
   }
+.fanlarbtns{
+    width: 100%;
+    height: auto;
+    padding: 30px 0%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+.fanlarbtn{
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 6px;
+    background-color: white;
+    font-size: 25px;
+    position: relative;
+}
+.fanlarbtn::before{
+    position:absolute;
+    bottom:-7px;
+    left:0;
+    content:'';
+    width: 0%;
+    height: 2px;
+    background-color: orange;
+    transition: all 0.3s ease-in-out;
+}
+.fanlarbtn:hover{
+    background-color: orange;
+    color: white;
+    text-shadow:0px 1px 1px black;
+}
+.fanlarbtn.active{
+    background-color: orange;
+    color:white;
+    text-shadow:0px 1px 1px black;
+}
+.fanlarbtn.active::before{
+    width: 100%;
+}
+.fanlarbtn:hover::before{
+    width: 100%;
+}
 .uyincards{
     width: 100%;
     height: auto;
@@ -600,10 +642,28 @@ footer ul a{
   /* sec2 */
   .sec2{
     padding: 50px 3%;
+    --border-size: 1px;
+  }
+  .fanlarbtns{
+    width: 100%;
+    height: auto;
+    padding: 15px 0%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+  .uyinchicard h3{
+    font-size: 18px;
   }
   .uyinbody{
     height: 350px;
     padding: 10px;
+  }
+  .profilcard {
+    padding: 15px 0px;
+  }
+  .profilcard .title{
+    font-size: 25px;
   }
   .savol{
     font-size: 18px;
@@ -645,7 +705,7 @@ footer ul a{
     }
     /* sec3 */
     .splide__slide{
-        height: 250px !important;
+        height: 220px !important;
     }
    /* footer */
    footer{
