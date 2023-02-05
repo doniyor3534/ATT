@@ -154,17 +154,20 @@ nav ul a:hover::before{
     font-size: 55px;
     color: white;
     text-shadow: 1px 2px 2px black;
-    margin: 20px 0px;
-    display: flex;
-    gap: 10px;
-    justify-content: space-around;
-    align-items: center;
+  
 }
 .titleparagrf{
     font-size: 35px;
     color: white;
     text-shadow: 1px 2px 2px black;
     text-align: center;
+    margin: 20px 0px;
+}
+.textflex{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
     margin: 20px 0px;
 }
 .blacktitle{
@@ -268,6 +271,7 @@ nav ul a:hover::before{
 }
 .secund{
     color: white;
+    font-size: 25px;
 }
 .uyinbody{
     width: 100%;
