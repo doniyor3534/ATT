@@ -1,3 +1,4 @@
+// navbar
 let loadercontainer = document.querySelector('.loadercontainer')
 setTimeout(() => {
     loadercontainer.style.display ='none'
@@ -23,8 +24,27 @@ ulA.forEach((val)=>{
         ul.classList.remove('active')
     })
 })
-
-
+// navbar///////////////
+let fanlar = [`Ta'lim.Y.K `,`Texnik.T.A.T `,`Oliy-matematika `,`Ingliz-tili `,`Rus-tili `]
+let fancount = 0
+let fanlarbtns = document.querySelector('.fanlarbtns');
+let fantext = document.querySelector('.fantext');
+function fanlardatafun(){
+    fanlarbtns.innerHTML = ''
+    fanlar.forEach((val,i)=>{
+        fanlarbtns.innerHTML+=`
+          <button class="fanlarbtn ${fancount === i ?'active':''}" key=${i} onclick="fanfun(${i})">${val}</button>
+        `
+    })
+}
+fanlardatafun()
+fantext.innerHTML = fanlar[fancount]
+function fanfun(i){
+    fancount = i
+    fanlardatafun()
+    ustozlarfunfun()
+    fantext.innerHTML = fanlar[fancount]
+}
 
 
 
@@ -70,14 +90,14 @@ let uyinchilardata = [
     { id: 12, name: 'Doniyorbek Tursunov5', strs: 6, img: './img/doniyor.jpg' },
 ];
 let ustozlardata = [
-    { id: 1, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 2, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 1, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 6 },
+    { id: 2, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 6 },
     { id: 3, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
     { id: 4, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 5, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 6, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 7, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 8, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 5, name: 'Saida Abdullayeva', img: './img/saidaoya.jpg', strs: 6 },
+    // { id: 6, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    // { id: 7, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    // { id: 8, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
 ]
 
 
@@ -290,9 +310,10 @@ uyinchilarfun2()
 
 
 function ustozlarfunfun() {
+    ustozlarcard.innerHTML =''
     ustozlardata.map((val, i) => {
         ustozlarcard.innerHTML += `
-        <div class=" uyinchicard ">
+        <div class=" uyinchicard ${fancount===i?'active':''} ">
         <div class="imgcard"><img src=${val.img} alt="" class="img"></div>
         <div class="satrs">
            ${Array(val.strs).fill('').map((img) => (
@@ -316,25 +337,25 @@ ustozlarfunfun()
 
 
 
-// document.addEventListener('contextmenu',(e)=>{
-//     e.preventDefault()
-// })
-// document.onkeydown = function (e){
-//    if(event.keyCode == 123){
-//     return false
-//    }
-//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-//      return false
-//    }
-//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-//      return false
-//    }
-//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-//      return false
-//    }
-//    if(e.ctrlKey &&  e.keyCode == 'U'.charCodeAt(0)){
-//      return false
-//    }
+document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault()
+})
+document.onkeydown = function (e){
+   if(event.keyCode == 123){
+    return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false
+   }
+   if(e.ctrlKey &&  e.keyCode == 'U'.charCodeAt(0)){
+     return false
+   }
 
 
-// }
+}

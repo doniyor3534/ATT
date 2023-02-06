@@ -431,7 +431,10 @@ nav ul a:hover::before{
     gap: 15px;
     padding: 50px 0px;
     display: flex;
-    overflow-x: scroll;
+    transition: all 0.4s ease-in-out;
+}
+.uyinchicard.active{
+    transform: translateY(-20px);
 }
 
 .uyinchicard h3{
