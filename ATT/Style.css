@@ -542,7 +542,7 @@ nav ul a:hover::before{
     box-shadow:rgb(0, 0, 0) 10px 20px 20px;
 }
  .splide__slide{
-    height: 600px !important;
+    height: 700px !important;
 }
 
 
@@ -709,6 +709,7 @@ footer ul a{
       overflow-x: scroll;
     }
     /* sec3 */
+  
     .splide__slide{
         height: 220px !important;
     }
