@@ -702,7 +702,9 @@ footer ul a{
     width: 30px !important;
     height: 30px !important;
   }
-
+  .ustozlarcard{
+    overflow-x: scroll;
+  }
   .uyinchilarcards, .uyinchilarcards2{
       overflow-x: scroll;
     }
