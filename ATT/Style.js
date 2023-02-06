@@ -56,11 +56,14 @@ let savollar = [
     { id: 5, savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
     { id: 6, savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
     { id: 7, savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
+    { id: 8, savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
+    { id: 9, savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
+    { id: 10, savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
 ]
 
 let javob = []
 let javobvariant = ['a', 'b', 'c', 'd']
-let tugrijavoblar = ['a', 'a', 'd', 'c','a','b','c']
+let tugrijavoblar = ['a', 'a', 'd', 'c','a','b','c','b','c','a']
 let uyinchilar = [
     { id: 1, name: '' },
     { id: 2, name: 'Doniyorbek' },
@@ -87,17 +90,14 @@ let uyinchilardata = [
     { id: 9, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
     { id: 10, name: 'Doniyorbek Tursunov5', strs: 5, img: './img/doniyor.jpg' },
     { id: 11, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 12, name: 'Doniyorbek Tursunov5', strs: 6, img: './img/doniyor.jpg' },
+    { id: 12, name: 'Doniyorbek Tursunov5', strs: 5, img: './img/doniyor.jpg' },
 ];
 let ustozlardata = [
-    { id: 1, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 6 },
-    { id: 2, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 6 },
-    { id: 3, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 4, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    { id: 5, name: 'Saida Abdullayeva', img: './img/saidaoya.jpg', strs: 6 },
-    // { id: 6, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    // { id: 7, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
-    // { id: 8, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 6 },
+    { id: 1, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 5 },
+    { id: 2, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 5 },
+    { id: 3, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 5 },
+    { id: 4, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 5 },
+    { id: 5, name: 'Saida Abdullayeva', img: './img/saidaoya.jpg', strs: 5 },
 ]
 
 
@@ -313,7 +313,7 @@ function ustozlarfunfun() {
     ustozlarcard.innerHTML =''
     ustozlardata.map((val, i) => {
         ustozlarcard.innerHTML += `
-        <div class=" uyinchicard ${fancount===i?'active':''} ">
+        <div class=" uyinchicard ${fancount===i?'active':''} " onclick="fanfun(${i})">
         <div class="imgcard"><img src=${val.img} alt="" class="img"></div>
         <div class="satrs">
            ${Array(val.strs).fill('').map((img) => (
@@ -337,25 +337,25 @@ ustozlarfunfun()
 
 
 
-document.addEventListener('contextmenu',(e)=>{
-    e.preventDefault()
-})
-document.onkeydown = function (e){
-   if(event.keyCode == 123){
-    return false
-   }
-   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-     return false
-   }
-   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-     return false
-   }
-   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-     return false
-   }
-   if(e.ctrlKey &&  e.keyCode == 'U'.charCodeAt(0)){
-     return false
-   }
+// document.addEventListener('contextmenu',(e)=>{
+//     e.preventDefault()
+// })
+// document.onkeydown = function (e){
+//    if(event.keyCode == 123){
+//     return false
+//    }
+//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+//      return false
+//    }
+//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+//      return false
+//    }
+//    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+//      return false
+//    }
+//    if(e.ctrlKey &&  e.keyCode == 'U'.charCodeAt(0)){
+//      return false
+//    }
 
 
-}
+// }
