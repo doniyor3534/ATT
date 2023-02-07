@@ -25,6 +25,98 @@ ulA.forEach((val)=>{
     })
 })
 // navbar///////////////
+
+// savollar 
+let talimyonalishi =[
+    { id: 1, javob:'a',savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
+    { id: 2, javob:'a',savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
+    { id: 3, javob:'d',savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
+    { id: 4, javob:'c',savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
+    { id: 5, javob:'a',savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
+    { id: 6, javob:'b',savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
+    { id: 7, javob:'c',savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
+    { id: 8, javob:'b',savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
+    { id: 9, javob:'c',savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
+    { id: 10, javob:'a',savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
+];
+let texniktizimlar =[
+    {id:1,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:2,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:3,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:4,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:5,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:6,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:7,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:8,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:9,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:10,javob:'',savol:'',a:'',b:'',c:'',d:''}
+];
+let matematika =[
+    {id:1,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:2,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:3,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:4,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:5,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:6,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:7,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:8,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:9,javob:'',savol:'',a:'',b:'',c:'',d:''},
+    {id:10,javob:'',savol:'',a:'',b:'',c:'',d:''}
+];
+let ingliztili =[
+    {id:1,javob:'b',savol:'It’s big.  It can swim. What’s it?  ',a:'hen',b:'crocodile  ',c:'duck',d:'fish'},
+    {id:2,javob:'a',savol:'I …….  (yaxshi ko’raman) an ice cream. ',a:'like',b:' `ve got',c:'collect ',d:'cook'},
+    {id:3,javob:'d',savol:'He…… five trains',a:'am',b:'is',c:'you',d:'have got'},
+    {id:4,javob:'c',savol:'What does the cow say?',a:'woof-woof',b:'meow-meow',c:'moo-moo',d:'quak-quak'},
+    {id:5,javob:'d',savol:' I’ve got a friend.  ……. name’s  Aziz.',a:'our',b:'her',c:'he',d:'his'},
+    {id:6,javob:'b',savol:'It’s a cat.   It can  …….  .',a:'swim',b:'climb',c:'fly',d:'dance'},
+    {id:7,javob:'a',savol:'What’s your favourite day ?',a:'monday',b:'Teddy bear',c:'bag',d:'doll'},
+    {id:8,javob:'c',savol:'six plus three is ...',a:'eight',b:'ten',c:'nine',d:'seven'},
+    {id:9,javob:'c',savol:'Lola  ………… an eraser.',a:'have got',b:'is',c:'has got',d:'are'},
+    {id:10,javob:'a',savol:'Translate the sentence: This is my family.',a:'Bu mening oilam. ',b:'Bu uning do’sti.',c:'Bu mening oyim.',d:'Bular do’stlarim'}
+];
+let rustili =[
+    {id:1,javob:'c',savol:'Укажите  слова  с уменьшительно-ласкательным  значением:',a:'мама, папа, книга ',b:'дерево, письмо, осень ',c:'мамочка, папочка, книжечка',d:'трава, дом, мяч'},
+    {id:2,javob:'d',savol:'Восстановите пословицу: Какой …, такой и трактор.',a:'моторист ',b:'артист ',c:'танкист',d:'тракторист'},
+    {id:3,javob:'a',savol:'Как называют музыканта, который играет на гитаре:',a:'гитарист',b:'гитаристы ',c:'гитары',d:'гитарный'},
+    {id:4,javob:'d',savol:'Что называет имя прилагательное?',a:'предмет ',b:'действие предмета ',c:'число',d:'признак предмета'},
+    {id:5,javob:'a',savol:' Вставьте нужные окончания: Санжар любит спорт, он стройн…, спортивн… мальчик.',a:'–ый',b:'–ий',c:'–ая',d:'–ое'},
+    {id:6,javob:'c',savol:'Дополните пословицу: Век живи – век…',a:'займись',b:'торопись',c:'учись ',d:'учи'},
+    {id:7,javob:'b',savol:'Что обозначает глагол?',a:'признак предмета',b:'действие предмета ',c:'предмет',d:'число'},
+    {id:8,javob:'a',savol:'Что такое эпитет?',a:'образное определение предмета',b:'скрытое сравнение ',c:'метафора ',d:'троп'},
+    {id:9,javob:'c',savol:'Укажите существительное, имеющее форму только множественного числа:',a:'поля ',b:'облака ',c:'ножницы ',d:'карандаши'},
+    {id:10,javob:'c',savol:'В каком варианте выражено отрицание?',a:'жил некто',b:'увидел нечто',c:'никто не пришёл ',d:'что-то нашёл'}
+];
+// savollar 
+
+let savollar = talimyonalishi
+let javob = []
+let javobvariant = ['a', 'b', 'c', 'd']
+// dataRandom
+function randomfun(array){
+    let res = [];
+    let set  = new Set();
+    let ran = 0;
+    while(true){
+        ran = parseInt(Math.random()*10);
+        if(array.length === res.length){
+            break
+        }else{
+            if(!set.has(ran)){
+                set.add(ran);
+                res.push(array[ran])
+            }
+        }
+    }
+    savollar = res
+}
+randomfun(savollar)
+randomfun(savollar)
+console.log(savollar);
+
+// dataRandom
+// fanlarfun
+let savoldatalar =[talimyonalishi,texniktizimlar,matematika,ingliztili,rustili]
 let fanlar = [`Ta'lim.Y.K `,`Texnik.T.A.T `,`Oliy-matematika `,`Ingliz-tili `,`Rus-tili `]
 let fancount = 0
 let fanlarbtns = document.querySelector('.fanlarbtns');
@@ -44,26 +136,11 @@ function fanfun(i){
     fanlardatafun()
     ustozlarfunfun()
     fantext.innerHTML = fanlar[fancount]
+    savollar =savoldatalar[i]
+    Clearcountfun()
 }
 
-
-
-let savollar = [
-    { id: 1, savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
-    { id: 2, savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
-    { id: 3, savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
-    { id: 4, savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
-    { id: 5, savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
-    { id: 6, savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
-    { id: 7, savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
-    { id: 8, savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
-    { id: 9, savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
-    { id: 10, savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
-]
-
-let javob = []
-let javobvariant = ['a', 'b', 'c', 'd']
-let tugrijavoblar = ['a', 'a', 'd', 'c','a','b','c','b','c','a']
+// fanlarfun
 let uyinchilar = [
     { id: 1, name: '' },
     { id: 2, name: 'Doniyorbek' },
@@ -84,19 +161,19 @@ let uyinchilardata = [
     { id: 3, name: 'Doniyorbek Tursunov3', strs: 2, img: './img/doniyor.jpg' },
     { id: 4, name: 'Doniyorbek Tursunov4', strs: 6, img: './img/doniyor.jpg' },
     { id: 5, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 6, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 7, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 8, name: 'Doniyorbek Tursunov5', strs: 1, img: './img/doniyor.jpg' },
-    { id: 9, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 10, name: 'Doniyorbek Tursunov5', strs: 5, img: './img/doniyor.jpg' },
-    { id: 11, name: 'Doniyorbek Tursunov5', strs: 3, img: './img/doniyor.jpg' },
-    { id: 12, name: 'Doniyorbek Tursunov5', strs: 5, img: './img/doniyor.jpg' },
+    { id: 6, name: 'Doniyorbek Tursunov6', strs: 3, img: './img/doniyor.jpg' },
+    { id: 7, name: 'Doniyorbek Tursunov7', strs: 3, img: './img/doniyor.jpg' },
+    { id: 8, name: 'Doniyorbek Tursunov8', strs: 1, img: './img/doniyor.jpg' },
+    { id: 9, name: 'Doniyorbek Tursunov9', strs: 3, img: './img/doniyor.jpg' },
+    { id: 10, name: 'Doniyorbek Tursunov10', strs: 5, img: './img/doniyor.jpg' },
+    { id: 11, name: 'Doniyorbek Tursunov11', strs: 3, img: './img/doniyor.jpg' },
+    { id: 12, name: 'Doniyorbek Tursunov12', strs: 5, img: './img/doniyor.jpg' },
 ];
 let ustozlardata = [
     { id: 1, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 5 },
     { id: 2, name: `Ibrohim G'ofurjanov`, img: './img/ibrohimd.jpg', strs: 5 },
-    { id: 3, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 5 },
-    { id: 4, name: 'Aaaaaaaa Tttttttttt', img: './img/ustoz.png', strs: 5 },
+    { id: 3, name: 'Egamberdiyev O.M', img: './img/ustoz.png', strs: 5 },
+    { id: 4, name: 'Rahmonova M.N', img: './img/ingliztili.webp', strs: 5 },
     { id: 5, name: 'Saida Abdullayeva', img: './img/saidaoya.jpg', strs: 5 },
 ]
 
@@ -132,10 +209,10 @@ function uyinfunc() {
             ` 
    <p class="savol">${savollar[savolcount].savol}</p>
    <div class="variant">
-     <button  onclick='javobfun(${0})'>A)  <span>${savollar[savolcount].a}</span></button>
-     <button   onclick='javobfun(${1})'>B)  <span>${savollar[savolcount].b}</span></button>
-     <button  onclick='javobfun(${2})'>C)  <span>${savollar[savolcount].c}</span></button>
-     ${savollar[savolcount].d ? `<button   onclick='javobfun(${3})'>D)   <span>${savollar[savolcount].d}</span></button>` : ''} 
+     <button  onclick='javobfun(${0},${savollar[savolcount].id})'>A)  <span>${savollar[savolcount].a}</span></button>
+     <button   onclick='javobfun(${1},${savollar[savolcount].id})'>B)  <span>${savollar[savolcount].b}</span></button>
+     <button  onclick='javobfun(${2},${savollar[savolcount].id})'>C)  <span>${savollar[savolcount].c}</span></button>
+     ${savollar[savolcount].d ? `<button   onclick='javobfun(${3},${savollar[savolcount].id})'>D)   <span>${savollar[savolcount].d}</span></button>` : ''} 
    </div>
    <div class="uyinbodyfooter">
      <button class="next" onclick='savolcountfun()'>Next </button>
@@ -200,13 +277,16 @@ function Clearcountfun() {
 }
 
 // javob
-function javobfun(i) {
+let jabaobmassiw=0
+function javobfun(i,id) {
     let variant = document.querySelectorAll('.variant > button')
     javob.push(javobvariant[i])
-
-    if (javob.flat('').reverse().slice(0, 1)[0] === tugrijavoblar[savolcount]) {
+    let javelement = savollar.filter(val=>val.id === id)
+    
+    if (javob.flat('').reverse().slice(0, 1)[0] === javelement[0].javob) {
         variant[i].classList.add('ok')
         let a = setTimeout(okalert, 300)
+        jabaobmassiw++
     } else {
         variant[i].classList.add('err')
         let a = setTimeout(erralert, 300)
@@ -235,10 +315,9 @@ function erralert() {
 function yakunalert() {
     let uyinmodal = document.querySelector('.uyinmodal')
     let uyinmodalcard = document.querySelector('.uyinmodalcard')
-    let yakun = javob.filter((val, i) => javob[i] === tugrijavoblar[i])
-    let foiz = 100 / tugrijavoblar.length
+    let foiz = 100 / savollar.length
     uyinmodalcard.innerHTML = `
-    <h1 class='blacktitle'> <img  src=${Math.floor(foiz * yakun.length) > 70 ? './img/yutuqimg.png' : './img/yutuqimg3.png'} alt='' class='modalyakunimg' />   ${Math.floor(foiz * yakun.length)} %  ya'ni ${yakun.length} ta to'g'ri   bajardingiz !!  <img src=${(foiz * yakun.length) > 70 ? './img/yutuqimg2.png' : './img/yutuqimg3.png'} alt=''  class='modalyakunimg' /></h1>
+    <h1 class='blacktitle'> <img  src=${Math.floor(foiz * jabaobmassiw) > 70 ? './img/yutuqimg.png' : './img/yutuqimg3.png'} alt='' class='modalyakunimg' />   ${Math.floor(foiz * jabaobmassiw)} %  ya'ni ${jabaobmassiw} ta to'g'ri   bajardingiz !!  <img src=${(foiz * jabaobmassiw) > 70 ? './img/yutuqimg2.png' : './img/yutuqimg3.png'} alt=''  class='modalyakunimg' /></h1>
         <div class='modalyacunprofil'>
         <img src=${uyinchiprofil.img} alt="" class=''>
         <h2 class="title">${uyinchiprofil.name}</h2>
@@ -247,6 +326,7 @@ function yakunalert() {
     `
     uyinmodal.classList.add('active')
     secund.innerHTML = 0
+    jabaobmassiw = 0
 }
 function uyinmodalfunyakun() {
     let uyinmodal = document.querySelector('.uyinmodal')
