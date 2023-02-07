@@ -40,28 +40,28 @@ let talimyonalishi =[
     { id: 10, javob:'a',savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
 ];
 let texniktizimlar =[
-    {id:1,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:2,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:3,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:4,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:5,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:6,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:7,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:8,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:9,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:10,javob:'',savol:'',a:'',b:'',c:'',d:''}
+    { id: 1, javob:'a',savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
+    { id: 2, javob:'a',savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
+    { id: 3, javob:'d',savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
+    { id: 4, javob:'c',savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
+    { id: 5, javob:'a',savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
+    { id: 6, javob:'b',savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
+    { id: 7, javob:'c',savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
+    { id: 8, javob:'b',savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
+    { id: 9, javob:'c',savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
+    { id: 10, javob:'a',savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
 ];
 let matematika =[
-    {id:1,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:2,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:3,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:4,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:5,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:6,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:7,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:8,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:9,javob:'',savol:'',a:'',b:'',c:'',d:''},
-    {id:10,javob:'',savol:'',a:'',b:'',c:'',d:''}
+    {id:1,javob:'a',savol:'Agar   a(2;1;3)  va  b(-1;x;2)  vektorlar uzunligi teng bo’lsa ,x ni toping.',a:'±3',b:'±2',c:'3',d:'5'},
+    {id:2,javob:'d',savol:'Funksiya hosilasini toping: f(x)=5 ',a:'x',b:'5',c:'10',d:'0'},
+    {id:3,javob:'c',savol:'Markazi koordinatalar boshida , radiusi 5 ga teng bolgan sfera tenglamasini yozing.',a:'x2+y2+z2≤25',b:'x2+y2+z2≥25',c:'x2+y2+z2=25',d:'(x-1)2+(y-1)2+(z-1)2=25'},
+    {id:4,javob:'a',savol:'A(2;0;-3) va B(3;4;0) nuqtalar orasidagi masofani toping.',a:'√26',b:'√24',c:'16',d:'18'},
+    {id:5,javob:'b',savol:' Koordinatalar boshidan y=x2-4x+3 parabolaning simmetriya o’qigacha bo’lgan masofani toping.',a:'1',b:'2',c:'1.5',d:'2.5'},
+    {id:6,javob:'d',savol:' a̅(0;-4;2)  va  b̅(2;2;3)  vektorlarning skalyar ko’paytmasini toping.',a:'-14',b:'14',c:'-2',d:'10'},
+    {id:7,javob:'c',savol:' Yuzi 9π sm2 bo’lgan doirani o’rab turgan aylana uzunligini toping.',a:'9π',b:'3π',c:'6π',d:'12π'},
+    {id:8,javob:'c',savol:'Konversiya bilan teng kuchli mulohazani ko’rsating:',a:'Kontrapozitsiya',b:'implikatsiya',c:'inversiya',d:'ekvivalensiya'},
+    {id:9,javob:'d',savol:' sinx funksiyaning hosilasini toping',a:'-cosx',b:'tgx',c:'-sinx',d:'cosx'},
+    {id:10,javob:'b',savol:'Uchlari A(1;2;3) , B(2;3;1), C(3;1;2) nuqtalarda bo’lgan uchburchakning perimetrini toping.',a:'3',b:'3√6',c:'6',d:'9'}
 ];
 let ingliztili =[
     {id:1,javob:'b',savol:'It’s big.  It can swim. What’s it?  ',a:'hen',b:'crocodile  ',c:'duck',d:'fish'},
