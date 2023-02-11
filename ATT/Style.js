@@ -1,7 +1,7 @@
 // navbar
 let loadercontainer = document.querySelector('.loadercontainer')
 setTimeout(() => {
-    loadercontainer.style.display ='none'
+    loadercontainer.style.display = 'none'
 }, 2000);
 
 
@@ -11,81 +11,84 @@ let ulA = document.querySelectorAll('nav ul a')
 let menu = document.querySelector('.menu')
 
 
-menu.addEventListener('click',()=>{
-    if(ul.className !== 'active'){
+menu.addEventListener('click', () => {
+    if (ul.className !== 'active') {
         ul.classList.add('active')
-    }else{
+    } else {
         ul.classList.remove('active')
     }
 })
 
-ulA.forEach((val)=>{
-    val.addEventListener('click',()=>{
+ulA.forEach((val) => {
+    val.addEventListener('click', () => {
         ul.classList.remove('active')
     })
 })
 // navbar///////////////
+// converter 
+
+// converter 
 
 // savollar 
-let talimyonalishi =[
-    { id: 1, javob:'a',savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
-    { id: 2, javob:'a',savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
-    { id: 3, javob:'d',savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
-    { id: 4, javob:'c',savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
-    { id: 5, javob:'a',savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
-    { id: 6, javob:'b',savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
-    { id: 7, javob:'c',savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
-    { id: 8, javob:'b',savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
-    { id: 9, javob:'c',savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
-    { id: 10, javob:'a',savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
+let talimyonalishi = [
+    { id: 1, javob: 'a', savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
+    { id: 2, javob: 'a', savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
+    { id: 3, javob: 'd', savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
+    { id: 4, javob: 'c', savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
+    { id: 5, javob: 'a', savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
+    { id: 6, javob: 'b', savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
+    { id: 7, javob: 'c', savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
+    { id: 8, javob: 'b', savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
+    { id: 9, javob: 'c', savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
+    { id: 10, javob: 'a', savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
 ];
-let texniktizimlar =[
-    { id: 1, javob:'a',savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
-    { id: 2, javob:'a',savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
-    { id: 3, javob:'d',savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
-    { id: 4, javob:'c',savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
-    { id: 5, javob:'a',savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
-    { id: 6, javob:'b',savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
-    { id: 7, javob:'c',savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
-    { id: 8, javob:'b',savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
-    { id: 9, javob:'c',savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
-    { id: 10, javob:'a',savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
+let texniktizimlar = [
+    { id: 1, javob: 'a', savol: 'Kompyuterning asosiy qurilmalari nimalardan iborat?', a: 'Sistemali blok, monitor, klaviatura, sichqoncha  ', b: 'Modem, printer, monitor, klaviatura ', c: 'Sistemali blok, printer, klaviatura, sichqoncha' },
+    { id: 2, javob: 'a', savol: 'Monitor  so’zining  ma’nosini toping?.', a: 'Lotincha   “eslatuvchi, xabar  beruvchi” ', b: 'Inglizcha   eslatuvchi', c: 'Grekcha   eslatuvch ', d: 'Grekcha  “ eslatuvchi, xabar  beruvchi' },
+    { id: 3, javob: 'd', savol: 'Magnit discklariga axborot qaysi qurilma yordamida yoziladi?', a: 'Proector', b: 'Printer   ', c: 'Nurli pero', d: 'Disckyugurtich' },
+    { id: 4, javob: 'c', savol: 'Algoritim bu-nima deyiladi ?', a: 'ko’rsatmalar ', b: 'tartib buzilishi ', c: 'buyruqlarning ketma –ketligi ', d: 'mo’ljallangan narsa ' },
+    { id: 5, javob: 'a', savol: 'Kibernetika maktabining asoschisi kim? ', a: 'Vasil Qobilov  ', b: 'Vasil Ahmedov ', c: ' Jordan ', d: 'Fleming  ' },
+    { id: 6, javob: 'b', savol: 'Qachon 1-kompyuter yaratildi?', a: '1977 ', b: '1973 ', c: '1968 ', d: '1912 ' },
+    { id: 7, javob: 'c', savol: 'Fayl so`zining manosi?', a: 'maydon', b: 'amal  ', c: 'malumot ', d: ' adres ' },
+    { id: 8, javob: 'b', savol: 'Ma’lumotlar ombori nima ?', a: 'Xotirada saqlanayotgan ixtiyoriy ma’lumot.', b: 'Borliqni ma’lum bir sohasi bo`yicha birlashtirgan ma’lumotlar to`plami.  ', c: 'Biror dasturlash tilida tuzilgan dastur. ', d: ' Ixtiyoriy matn ko`rinishidagi axborot.     ' },
+    { id: 9, javob: 'c', savol: 'EXCELda tayyorlangan  hujjat qanday kengaytmada faylda saqlanadi?  ', a: '.DOS', b: '.TXT  ', c: '.XLS ', d: ' .BAS ' },
+    { id: 10, javob: 'a', savol: 'Izlash  va almashtirish  uchun  muloqot  oynasini  chiqarish  uchun  qaysi tugmalar  jufti  bosiladi?. ', a: 'Ctrl+F', b: 'Ctrl+D ', c: 'Ctrl+N', d: 'Ctrl+C' },
 ];
-let matematika =[
-    {id:1,javob:'a',savol:'Agar   a(2;1;3)  va  b(-1;x;2)  vektorlar uzunligi teng bo’lsa ,x ni toping.',a:'±3',b:'±2',c:'3',d:'5'},
-    {id:2,javob:'d',savol:'Funksiya hosilasini toping: f(x)=5 ',a:'x',b:'5',c:'10',d:'0'},
-    {id:3,javob:'c',savol:'Markazi koordinatalar boshida , radiusi 5 ga teng bolgan sfera tenglamasini yozing.',a:'x2+y2+z2≤25',b:'x2+y2+z2≥25',c:'x2+y2+z2=25',d:'(x-1)2+(y-1)2+(z-1)2=25'},
-    {id:4,javob:'a',savol:'A(2;0;-3) va B(3;4;0) nuqtalar orasidagi masofani toping.',a:'√26',b:'√24',c:'16',d:'18'},
-    {id:5,javob:'b',savol:' Koordinatalar boshidan y=x2-4x+3 parabolaning simmetriya o’qigacha bo’lgan masofani toping.',a:'1',b:'2',c:'1.5',d:'2.5'},
-    {id:6,javob:'d',savol:' a̅(0;-4;2)  va  b̅(2;2;3)  vektorlarning skalyar ko’paytmasini toping.',a:'-14',b:'14',c:'-2',d:'10'},
-    {id:7,javob:'c',savol:' Yuzi 9π sm2 bo’lgan doirani o’rab turgan aylana uzunligini toping.',a:'9π',b:'3π',c:'6π',d:'12π'},
-    {id:8,javob:'c',savol:'Konversiya bilan teng kuchli mulohazani ko’rsating:',a:'Kontrapozitsiya',b:'implikatsiya',c:'inversiya',d:'ekvivalensiya'},
-    {id:9,javob:'d',savol:' sinx funksiyaning hosilasini toping',a:'-cosx',b:'tgx',c:'-sinx',d:'cosx'},
-    {id:10,javob:'b',savol:'Uchlari A(1;2;3) , B(2;3;1), C(3;1;2) nuqtalarda bo’lgan uchburchakning perimetrini toping.',a:'3',b:'3√6',c:'6',d:'9'}
+let matematika = [
+    { id: 1, javob: 'a', savol: 'Agar   a(2;1;3)  va  b(-1;x;2)  vektorlar uzunligi teng bo’lsa ,x ni toping.', a: '±3', b: '±2', c: '3', d: '5' },
+    { id: 2, javob: 'd', savol: 'Funksiya hosilasini toping: f(x)=5 ', a: 'x', b: '5', c: '10', d: '0' },
+    { id: 3, javob: 'c', savol: 'Markazi koordinatalar boshida , radiusi 5 ga teng bolgan sfera tenglamasini yozing.', a: 'x2+y2+z2≤25', b: 'x2+y2+z2≥25', c: 'x2+y2+z2=25', d: '(x-1)2+(y-1)2+(z-1)2=25' },
+    { id: 4, javob: 'a', savol: 'A(2;0;-3) va B(3;4;0) nuqtalar orasidagi masofani toping.', a: '√26', b: '√24', c: '16', d: '18' },
+    { id: 5, javob: 'b', savol: ' Koordinatalar boshidan y=x2-4x+3 parabolaning simmetriya o’qigacha bo’lgan masofani toping.', a: '1', b: '2', c: '1.5', d: '2.5' },
+    { id: 6, javob: 'd', savol: ' a̅(0;-4;2)  va  b̅(2;2;3)  vektorlarning skalyar ko’paytmasini toping.', a: '-14', b: '14', c: '-2', d: '10' },
+    { id: 7, javob: 'c', savol: ' Yuzi 9π sm2 bo’lgan doirani o’rab turgan aylana uzunligini toping.', a: '9π', b: '3π', c: '6π', d: '12π' },
+    { id: 8, javob: 'c', savol: 'Konversiya bilan teng kuchli mulohazani ko’rsating:', a: 'Kontrapozitsiya', b: 'implikatsiya', c: 'inversiya', d: 'ekvivalensiya' },
+    { id: 9, javob: 'd', savol: ' sinx funksiyaning hosilasini toping', a: '-cosx', b: 'tgx', c: '-sinx', d: 'cosx' },
+    { id: 10, javob: 'b', savol: 'Uchlari A(1;2;3) , B(2;3;1), C(3;1;2) nuqtalarda bo’lgan uchburchakning perimetrini toping.', a: '3', b: '3√6', c: '6', d: '9' }
 ];
-let ingliztili =[
-    {id:1,javob:'b',savol:'It’s big.  It can swim. What’s it?  ',a:'hen',b:'crocodile  ',c:'duck',d:'fish'},
-    {id:2,javob:'a',savol:'I …….  (yaxshi ko’raman) an ice cream. ',a:'like',b:' `ve got',c:'collect ',d:'cook'},
-    {id:3,javob:'d',savol:'He…… five trains',a:'am',b:'is',c:'you',d:'have got'},
-    {id:4,javob:'c',savol:'What does the cow say?',a:'woof-woof',b:'meow-meow',c:'moo-moo',d:'quak-quak'},
-    {id:5,javob:'d',savol:' I’ve got a friend.  ……. name’s  Aziz.',a:'our',b:'her',c:'he',d:'his'},
-    {id:6,javob:'b',savol:'It’s a cat.   It can  …….  .',a:'swim',b:'climb',c:'fly',d:'dance'},
-    {id:7,javob:'a',savol:'What’s your favourite day ?',a:'monday',b:'Teddy bear',c:'bag',d:'doll'},
-    {id:8,javob:'c',savol:'six plus three is ...',a:'eight',b:'ten',c:'nine',d:'seven'},
-    {id:9,javob:'c',savol:'Lola  ………… an eraser.',a:'have got',b:'is',c:'has got',d:'are'},
-    {id:10,javob:'a',savol:'Translate the sentence: This is my family.',a:'Bu mening oilam. ',b:'Bu uning do’sti.',c:'Bu mening oyim.',d:'Bular do’stlarim'}
+let ingliztili = [
+    { id: 1, javob: 'b', savol: 'It’s big.  It can swim. What’s it?  ', a: 'hen', b: 'crocodile  ', c: 'duck', d: 'fish' },
+    { id: 2, javob: 'a', savol: 'I …….  (yaxshi ko’raman) an ice cream. ', a: 'like', b: ' `ve got', c: 'collect ', d: 'cook' },
+    { id: 3, javob: 'd', savol: 'He…… five trains', a: 'am', b: 'is', c: 'you', d: 'have got' },
+    { id: 4, javob: 'c', savol: 'What does the cow say?', a: 'woof-woof', b: 'meow-meow', c: 'moo-moo', d: 'quak-quak' },
+    { id: 5, javob: 'd', savol: ' I’ve got a friend.  ……. name’s  Aziz.', a: 'our', b: 'her', c: 'he', d: 'his' },
+    { id: 6, javob: 'b', savol: 'It’s a cat.   It can  …….  .', a: 'swim', b: 'climb', c: 'fly', d: 'dance' },
+    { id: 7, javob: 'a', savol: 'What’s your favourite day ?', a: 'monday', b: 'Teddy bear', c: 'bag', d: 'doll' },
+    { id: 8, javob: 'c', savol: 'six plus three is ...', a: 'eight', b: 'ten', c: 'nine', d: 'seven' },
+    { id: 9, javob: 'c', savol: 'Lola  ………… an eraser.', a: 'have got', b: 'is', c: 'has got', d: 'are' },
+    { id: 10, javob: 'a', savol: 'Translate the sentence: This is my family.', a: 'Bu mening oilam. ', b: 'Bu uning do’sti.', c: 'Bu mening oyim.', d: 'Bular do’stlarim' }
 ];
-let rustili =[
-    {id:1,javob:'c',savol:'Укажите  слова  с уменьшительно-ласкательным  значением:',a:'мама, папа, книга ',b:'дерево, письмо, осень ',c:'мамочка, папочка, книжечка',d:'трава, дом, мяч'},
-    {id:2,javob:'d',savol:'Восстановите пословицу: Какой …, такой и трактор.',a:'моторист ',b:'артист ',c:'танкист',d:'тракторист'},
-    {id:3,javob:'a',savol:'Как называют музыканта, который играет на гитаре:',a:'гитарист',b:'гитаристы ',c:'гитары',d:'гитарный'},
-    {id:4,javob:'d',savol:'Что называет имя прилагательное?',a:'предмет ',b:'действие предмета ',c:'число',d:'признак предмета'},
-    {id:5,javob:'a',savol:' Вставьте нужные окончания: Санжар любит спорт, он стройн…, спортивн… мальчик.',a:'–ый',b:'–ий',c:'–ая',d:'–ое'},
-    {id:6,javob:'c',savol:'Дополните пословицу: Век живи – век…',a:'займись',b:'торопись',c:'учись ',d:'учи'},
-    {id:7,javob:'b',savol:'Что обозначает глагол?',a:'признак предмета',b:'действие предмета ',c:'предмет',d:'число'},
-    {id:8,javob:'a',savol:'Что такое эпитет?',a:'образное определение предмета',b:'скрытое сравнение ',c:'метафора ',d:'троп'},
-    {id:9,javob:'c',savol:'Укажите существительное, имеющее форму только множественного числа:',a:'поля ',b:'облака ',c:'ножницы ',d:'карандаши'},
-    {id:10,javob:'c',savol:'В каком варианте выражено отрицание?',a:'жил некто',b:'увидел нечто',c:'никто не пришёл ',d:'что-то нашёл'}
+let rustili = [
+    { id: 1, javob: 'c', savol: 'Укажите  слова  с уменьшительно-ласкательным  значением:', a: 'мама, папа, книга ', b: 'дерево, письмо, осень ', c: 'мамочка, папочка, книжечка', d: 'трава, дом, мяч' },
+    { id: 2, javob: 'd', savol: 'Восстановите пословицу: Какой …, такой и трактор.', a: 'моторист ', b: 'артист ', c: 'танкист', d: 'тракторист' },
+    { id: 3, javob: 'a', savol: 'Как называют музыканта, который играет на гитаре:', a: 'гитарист', b: 'гитаристы ', c: 'гитары', d: 'гитарный' },
+    { id: 4, javob: 'd', savol: 'Что называет имя прилагательное?', a: 'предмет ', b: 'действие предмета ', c: 'число', d: 'признак предмета' },
+    { id: 5, javob: 'a', savol: ' Вставьте нужные окончания: Санжар любит спорт, он стройн…, спортивн… мальчик.', a: '–ый', b: '–ий', c: '–ая', d: '–ое' },
+    { id: 6, javob: 'c', savol: 'Дополните пословицу: Век живи – век…', a: 'займись', b: 'торопись', c: 'учись ', d: 'учи' },
+    { id: 7, javob: 'b', savol: 'Что обозначает глагол?', a: 'признак предмета', b: 'действие предмета ', c: 'предмет', d: 'число' },
+    { id: 8, javob: 'a', savol: 'Что такое эпитет?', a: 'образное определение предмета', b: 'скрытое сравнение ', c: 'метафора ', d: 'троп' },
+    { id: 9, javob: 'c', savol: 'Укажите существительное, имеющее форму только множественного числа:', a: 'поля ', b: 'облака ', c: 'ножницы ', d: 'карандаши' },
+    { id: 10, javob: 'c', savol: 'В каком варианте выражено отрицание?', a: 'жил некто', b: 'увидел нечто', c: 'никто не пришёл ', d: 'что-то нашёл' }
 ];
 // savollar 
 
@@ -93,16 +96,16 @@ let savollar = talimyonalishi
 let javob = []
 let javobvariant = ['a', 'b', 'c', 'd']
 // dataRandom
-function randomfun(array){
+function randomfun(array) {
     let res = [];
-    let set  = new Set();
+    let set = new Set();
     let ran = 0;
-    while(true){
-        ran = parseInt(Math.random()*10);
-        if(array.length === res.length){
+    while (true) {
+        ran = parseInt(Math.random() * 10);
+        if (array.length === res.length) {
             break
-        }else{
-            if(!set.has(ran)){
+        } else {
+            if (!set.has(ran)) {
                 set.add(ran);
                 res.push(array[ran])
             }
@@ -115,28 +118,44 @@ randomfun(savollar)
 console.log(savollar);
 
 // dataRandom
+// pdflar
+let pdflar = [
+    {id:1,fan:`Ta'lim.Y.K`,pdf:'./att.pdf',mavzu:'Attt'},
+    {id:2,fan:`Texnik.T.A.T `,pdf:'./att.pdf',mavzu:'Attt'},
+    {id:3,fan:`Oliy-matematika `,pdf:'./matematika.pdf',mavzu:'Attt'},
+    {id:4,fan:`Ingliz-tili `,pdf:'./ingliztili.pdf',mavzu:'Attt'},
+    {id:5,fan:`Rus-tili `,pdf:'./rus-tili-9.pdf',mavzu:'Attt'},
+]
+// pdflar
+let pdfcard = document.querySelector('.pdfcard')
 // fanlarfun
-let savoldatalar =[talimyonalishi,texniktizimlar,matematika,ingliztili,rustili]
-let fanlar = [`Ta'lim.Y.K `,`Texnik.T.A.T `,`Oliy-matematika `,`Ingliz-tili `,`Rus-tili `]
+let savoldatalar = [talimyonalishi, texniktizimlar, matematika, ingliztili, rustili]
+let fanlar = [`Ta'lim.Y.K `, `Texnik.T.A.T `, `Oliy-matematika `, `Ingliz-tili `, `Rus-tili `]
 let fancount = 0
 let fanlarbtns = document.querySelector('.fanlarbtns');
 let fantext = document.querySelector('.fantext');
-function fanlardatafun(){
+let fantext2 = document.querySelector('.fantext2');
+function fanlardatafun() {
     fanlarbtns.innerHTML = ''
-    fanlar.forEach((val,i)=>{
-        fanlarbtns.innerHTML+=`
-          <button class="fanlarbtn ${fancount === i ?'active':''}" key=${i} onclick="fanfun(${i})">${val}</button>
+    fanlar.forEach((val, i) => {
+        fanlarbtns.innerHTML += `
+          <button class="fanlarbtn ${fancount === i ? 'active' : ''}" key=${i} onclick="fanfun(${i})">${val}</button>
         `
     })
 }
 fanlardatafun()
 fantext.innerHTML = fanlar[fancount]
-function fanfun(i){
+fantext2.innerHTML = fanlar[fancount]
+console.log(fantext);
+function fanfun(i) {
     fancount = i
     fanlardatafun()
     ustozlarfunfun()
-    fantext.innerHTML = fanlar[fancount]
-    savollar =savoldatalar[i]
+    fantext.innerHTML = fanlar[i]
+    fantext2.innerHTML = fanlar[i]
+    savollar = savoldatalar[i]
+    pdfcard.src = pdflar[i].pdf ;
+    console.log(pdflar[i].pdf)
     Clearcountfun()
 }
 
@@ -236,12 +255,12 @@ let yakunresult = false
 let secfun = setInterval(secuntfun, 1000);
 clearInterval(secfun)
 function startfun() {
-    if(!uyinchi){
-        uyincard.style.border ='2px solid red'
-    }else{
+    if (!uyinchi) {
+        uyincard.style.border = '2px solid red'
+    } else {
         uyinfunc()
         secfun = setInterval(secuntfun, 1000);
-        b = 0 
+        b = 0
     }
 }
 
@@ -251,7 +270,7 @@ function secuntfun() {
 }
 let savolcounttext = document.querySelector('.savolcount');
 let savolcount = 0;
-savolcounttext.innerHTML = savolcount + 1  +` / `+savollar.length
+savolcounttext.innerHTML = savolcount + 1 + ` / ` + savollar.length
 function savolcountfun() {
     if (savolcount < savollar.length - 1) {
         savolcount++
@@ -261,13 +280,13 @@ function savolcountfun() {
         yakunresult = true
         clearInterval(secfun)
     }
-    savolcounttext.innerHTML = savolcount + 1 +` / `+savollar.length
+    savolcounttext.innerHTML = savolcount + 1 + ` / ` + savollar.length
     uyinfunc()
 }
 // Clearcountfun
 function Clearcountfun() {
     savolcount = 0
-    savolcounttext.innerHTML = savolcount + 1  +` / `+savollar.length
+    savolcounttext.innerHTML = savolcount + 1 + ` / ` + savollar.length
     clearInterval(secfun)
     secund.innerHTML = 0
     uyinchi = ''
@@ -277,12 +296,12 @@ function Clearcountfun() {
 }
 
 // javob
-let jabaobmassiw=0
-function javobfun(i,id) {
+let jabaobmassiw = 0
+function javobfun(i, id) {
     let variant = document.querySelectorAll('.variant > button')
     javob.push(javobvariant[i])
-    let javelement = savollar.filter(val=>val.id === id)
-    
+    let javelement = savollar.filter(val => val.id === id)
+
     if (javob.flat('').reverse().slice(0, 1)[0] === javelement[0].javob) {
         variant[i].classList.add('ok')
         let a = setTimeout(okalert, 300)
@@ -351,16 +370,21 @@ function uyinmodalfun() {
 let uyinchilarcards = document.querySelector('.uyinchilarcards')
 let uyinchilarcards2 = document.querySelector('.uyinchilarcards2')
 let ustozlarcard = document.querySelector('.ustozlarcard')
+const starFun = (count) => {
+    let img = ''
+    for (let key=0; key<count; key++) {
+        img = img + `<img src='./img/star.png' alt=""/>`
+    }
+    return img
+
+}
 function uyinchilarfun() {
     uyinchilardata.filter((val) => val.strs >= 4).map((val, i) => {
         uyinchilarcards.innerHTML += `
         <div class="uyinchicard">
         <div class="imgcard"><img src="./img/doniyor.jpg" alt="" class="img"></div>
         <div class="satrs">
-           ${Array(val.strs).fill('').map((img) => (
-            `<img src='./img/star.png' alt=""/>`
-        ))
-            }
+        ${starFun(val.strs)}
         </div>
         <h3 class="name">${val.name}</h3>
     </div>
@@ -375,10 +399,7 @@ function uyinchilarfun2() {
         <div class="uyinchicard">
         <div class="imgcard"><img src="./img/doniyor.jpg" alt="" class="img"></div>
         <div class="satrs">
-           ${Array(val.strs).fill('').map((img) => (
-            `<img src='./img/star.png' alt=""/>`
-        ))
-            }
+        ${starFun(val.strs)}
         </div>
         <h3 class="name">${val.name}</h3>
     </div>
@@ -390,16 +411,13 @@ uyinchilarfun2()
 
 
 function ustozlarfunfun() {
-    ustozlarcard.innerHTML =''
+    ustozlarcard.innerHTML = ''
     ustozlardata.map((val, i) => {
         ustozlarcard.innerHTML += `
-        <div class=" uyinchicard ${fancount===i?'active':''} " onclick="fanfun(${i})">
+        <div class=" uyinchicard ${fancount === i ? 'active' : ''} " onclick="fanfun(${i})">
         <div class="imgcard"><img src=${val.img} alt="" class="img"></div>
         <div class="satrs">
-           ${Array(val.strs).fill('').map((img) => (
-            `<img src='./img/star.png' alt=""/>`
-        ))
-            }
+        ${starFun(val.strs)}
         </div>
         <h3 class="name">${val.name}</h3>
     </div>

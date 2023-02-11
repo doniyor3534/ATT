@@ -133,6 +133,13 @@ nav ul a:hover::before{
     margin: 20px 0px;
 }
 
+
+/* ////////pdfcard */
+.pdfcard{
+    width: 100%;
+    height: 700px;
+}
+/* ////////pdfcard */
 /* sec1 */
 
 .sec1{
@@ -157,11 +164,11 @@ nav ul a:hover::before{
   
 }
 .titleparagrf{
-    font-size: 35px;
+    font-size: 40px;
     color: white;
     text-shadow: 1px 2px 2px black;
     text-align: center;
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 .textflex{
     display: flex;
@@ -182,8 +189,8 @@ nav ul a:hover::before{
 .sec2 {
     width: 100%;
     min-height: 100vh;
-    --border-size: 2px;
-    --border-angle: 0turn;
+    /* --border-size: 2px;
+    --border-angle: 0turn; */
     background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
     background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
     background-position: center center;
@@ -547,7 +554,6 @@ nav ul a:hover::before{
 
 
 
-
 /* footer */
 footer{
     width: 100%;
@@ -587,13 +593,6 @@ footer ul a{
 }
 .facebook{
     color: rgb(20, 10, 212);
-}
-.github{
-    color: rgb(7, 7, 7);
-    background-color: white;
-    border-radius: 50%;
-    height: 90%;
-    overflow: hidden;
 }
 .github svg{
     width: 100%;
